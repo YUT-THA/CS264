@@ -12,7 +12,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.get('/', function (req, res) {
-    res.render('index', {name: 'Songsakdi'});
+    res.render('index', {fname: 'YOKO YAMASHIDA',lname: 'Tom TEMM'});
 });
 
 app.listen(PORT, function () {
@@ -89,7 +89,7 @@ app.get('/api', function (req, res) {
 
 const options = {
     hostname: 'jsonplaceholder.typicode.com',
-    path: '/todos/1',
+    path: '/posts/1/comments',
     method: 'GET',
     'headers': {
         'Content-Type': 'application/json',
