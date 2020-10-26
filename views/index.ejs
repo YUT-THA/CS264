@@ -6,12 +6,19 @@
 </script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');
-
+  .fullscreen-block{
+    position: absolute;
+  background: #006699 url('https://image.freepik.com/free-vector/smooth-blue-blurred-background_1034-601.jpg') no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
 form {
+text-align: center;
 
-
-	border: 3px solid #f1f1f1;
-	width: 100%;
+	
 	height: 100%;
 	padding: 12px 0px;
 	margin: 8px 28px;
@@ -19,7 +26,8 @@ form {
   }
   /* Full-width inputs */
   input[type=text] {
-	width: 25%;
+
+  width: 20%;
 	padding: 12px 20px;
 	margin: 8px 0;
 	display: inline-block;
@@ -27,9 +35,10 @@ form {
 	box-sizing: border-box;
   }
   input[type=password] {
-	width: 25%;
+   
+	width: 20%;
 	padding: 12px 20px;
-	margin: 8px 28px;
+	margin: 8px 0px;
 	display: inline-block;
 	border: 1px solid #ccc;
 	box-sizing: border-box;
@@ -43,7 +52,7 @@ form {
 	margin: 8px 0;
 	border: none;
 	cursor: pointer;
-	width: 25%;
+	width: 20%;
   }
   
   /* Add a hover effect for buttons */
@@ -60,13 +69,13 @@ form {
   
   /* Center the avatar image inside this container */
   .imgcontainer {
-	text-align: left;
+	text-align:center;
 	margin: 24px 0 12px 0;
   }
   
   /* Avatar image */
   img.avatar {
-	width: 10%;
+	width: 15%;
 	border-radius: 10%;
   }
   
@@ -97,26 +106,27 @@ form {
  
 
 <body>
-  
-
+  <div class="fullscreen-block"></div>
 <form action="action_page.ejs" method="post">
-
+  
   <div class="imgcontainer">
     <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Emblem_of_Thammasat_University.svg" alt="Avatar" class="avatar">
   </div>
 
   <div class="container">
 
-    <label for="uname"><b>รหัสนักศึกษา</b></label>
+  
  
-    <input type="text" placeholder="Enter Username" name="uname" required>
+    <input type="text" placeholder="รหัสนักศึกษา" name="uname" required>
     <br>
-    <label for="psw"><b>รหัสผ่าน</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    
+    <input type="password" placeholder="รหัสผ่าน" name="psw" required>
     <br>  
     <button type="submit">Login</button>
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
+
+      </span>
     </label>
   </div>
 
