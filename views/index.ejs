@@ -8,20 +8,40 @@
   @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');
   .fullscreen-block{
     position: absolute;
-  background: #006699 url('https://image.freepik.com/free-vector/smooth-blue-blurred-background_1034-601.jpg') no-repeat;
+    
+    -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow:         inset 0 0 10px #000000;
+  background: #006699 url('https://dunham-bush.com/wp-content/uploads/2020/01/THAMMASAT-UNIVERSITY-THAILAND-900x556.jpg') no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
   width: 100vw;
   height: 100vh;
   z-index: -1;
 }
+.container2{
+  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+width: 100%;
+border: 1px solid #ccc;
+  background-color:white;
+  padding: 20;
+  font-family:'kanit'
+}
 form {
 text-align: center;
+ 
+  background: rgba(255, 248, 248, 0.459); 
+  
+-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 
-	
-	height: 100%;
+	height: 60%;
+  width: 40%;
 	padding: 12px 0px;
-	margin: 8px 28px;
+	margin: 80px 450px;
 	font-family:'kanit'
   }
   /* Full-width inputs */
@@ -52,7 +72,7 @@ text-align: center;
 	margin: 8px 0;
 	border: none;
 	cursor: pointer;
-	width: 20%;
+	width: 20%
   }
   
   /* Add a hover effect for buttons */
@@ -75,7 +95,7 @@ text-align: center;
   
   /* Avatar image */
   img.avatar {
-	width: 15%;
+	width: 20%;
 	border-radius: 10%;
   }
   
@@ -106,6 +126,19 @@ text-align: center;
  
 
 <body>
+  
+
+  
+
+
+  <div class = "container2">
+  <h2>ยินดีต้อนรับเข้าสู่ระบบบริการคำร้องออนไลน์</h2>
+  <p>กรุณา login เพื่อเข้าสู่ระบบ</p>
+  
+</div> 
+
+
+
   <div class="fullscreen-block"></div>
 <form action="action_page.ejs" method="post">
   
@@ -130,10 +163,9 @@ text-align: center;
     </label>
   </div>
 
-  <div class="container" style="background-color:#ffffff">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>
+  
+    <div class="psw">Forgot <a href="#">password?</a></div>
+  
  
 </form> 
 </body>
