@@ -12,7 +12,11 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.get('/', function (req, res) {
+<<<<<<< HEAD
     res.render('index', {fname: 'YOKO YAMASHIDA',lname: 'Tom TEMM'});
+=======
+    res.render('index', {fname: 'Songsakdi', lName: 'Rongviri'});
+>>>>>>> e9cff5bd4f95d4ea9af5f071f79fc2222dddb8f2
 });
 
 app.listen(PORT, function () {
@@ -95,13 +99,34 @@ const options = {
         'Content-Type': 'application/json',
     }
 };
-const req = http.request(options, response => {
+
+function dataCounter(inputs) {
+    let counter = 0;
+    for (const input of inputs) {
+        if (input.postId === 1) {
+            counter += 1;
+            console.log('input.postId:' + input.postId);
+            console.log('input.email:' + input.email);
+        }
+    }
+    return counter;
+};
+
+const req = http.request(options, function(response) {
     response.setEncoding('utf8');
+    var body = '';
     response.on('data', chunk => {
-        console.log('data:' + chunk);
+        body += chunk;
     });
 
     response.on('end', () => {
+        console.log('body:' + body);
+        var data = JSON.parse(body);
+        console.log('number of posts:' + dataCounter(data));
+        console.log('data:' + data);
+        console.log('data[0]:' + data[0]);
+        console.log('data[0].id:' + data[0].id);
+        console.log('data[0].email:' + data[0].email);
         console.log('end of GET request');
     });
 });
