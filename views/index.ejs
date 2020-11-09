@@ -1,5 +1,5 @@
-﻿<<<<<<< HEAD
-﻿<html>
+﻿
+<html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
@@ -125,19 +125,8 @@ text-align: center;
   
 </style>
  
-=======
-﻿<!DOCTYPE html>
-<html>
-<head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</head>
->>>>>>> e9cff5bd4f95d4ea9af5f071f79fc2222dddb8f2
+
+
 
 <body>
   
@@ -148,6 +137,7 @@ text-align: center;
   <div class = "container2">
   <h2>ยินดีต้อนรับเข้าสู่ระบบบริการคำร้องออนไลน์</h2>
   <p>กรุณา login เพื่อเข้าสู่ระบบ</p>
+  <p id = "show"></p>
   
 </div> 
 
@@ -161,14 +151,13 @@ text-align: center;
   </div>
 
   <div class="container">
-<<<<<<< HEAD
 
   
  
-    <input type="text" placeholder="รหัสนักศึกษา" name="uname" required>
+    <input type="text" id ="UserName"placeholder="รหัสนักศึกษา" name="uname" required>
     <br>
     
-    <input type="password" placeholder="รหัสผ่าน" name="psw" required>
+    <input type="password"id ="Password" placeholder="รหัสผ่าน" name="psw" required>
     <br>  
     <button type="submit">Login</button>
     <label>
@@ -181,38 +170,19 @@ text-align: center;
   
     <div class="psw"> <a href="#">Forgot password?</a></div>
   
- 
-</form> 
-=======
-    <p>First Name: <%= fname %></p>
-	<p>Last Name: <%=lName %></p>
-   </div>
-</div>
+<script>
+  var USER = document.getElementById("UserName");
+var PASS = document.getElementById("Password");
+</script>
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-      <h3>Column 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Column 2</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Column 3</h3>        
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-  </div>
-</div>
 
->>>>>>> e9cff5bd4f95d4ea9af5f071f79fc2222dddb8f2
+
+
 </body>
-<script>var https = require('https');
+<script>
 
+
+var https = require('https');
   var options = {
     'method': 'POST',
     'hostname': 'restapi.tu.ac.th',

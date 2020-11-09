@@ -12,11 +12,10 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.get('/', function (req, res) {
-<<<<<<< HEAD
+
     res.render('index', {fname: 'YOKO YAMASHIDA',lname: 'Tom TEMM'});
-=======
+
     res.render('index', {fname: 'Songsakdi', lName: 'Rongviri'});
->>>>>>> e9cff5bd4f95d4ea9af5f071f79fc2222dddb8f2
 });
 
 app.listen(PORT, function () {
